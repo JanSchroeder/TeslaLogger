@@ -5,5 +5,5 @@ datasources:
     type: mysql
     url: database:3306
     database: teslalogger
-    user: root
+    user: teslalogger
     password: teslalogger
