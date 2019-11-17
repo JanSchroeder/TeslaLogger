@@ -1,0 +1,10 @@
+{
+  "SleepTimeSpanStart": "21:00",
+  "SleepTimeSpanEnd": "06:00",
+  "SleepTimeSpanEnable": "true",
+  "Power": "hp",
+  "Temperature": "celsius",
+  "Length": "km",
+  "Language": "de",
+  "URL_Admin": "http:\/\/localhost:8888\/admin"
+}

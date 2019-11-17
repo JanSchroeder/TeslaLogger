@@ -18,15 +18,15 @@ services:
       - TZ=Europe/Berlin
 
   database:
-    image: mariadb:10.4.7
+    image: mariadb:latest
     restart: always
     env_file:
       - .env
     volumes:
       - ./TeslaLogger/sqlschema.sql:/docker-entrypoint-initdb.d/sqlschema.sql
+      - ./database/:/var/lib/mysql
     ports:
       - 3306:3306
-
   grafana:
     image: grafana/grafana:6.3.5
     restart: always
@@ -53,7 +53,6 @@ services:
     volumes:
       - ./TeslaLogger/www:/var/www/html
       - ./TeslaLogger/bin:/etc/teslalogger
-      - ./TeslaLogger/Properties/AssemblyInfo.cs:/etc/teslalogger/git/TeslaLogger/Properties/AssemblyInfo.cs
       - ./docker/teslalogger/Dockerfile:/tmp/teslalogger-DOCKER
       - teslalogger-tmp:/tmp/
     ports:

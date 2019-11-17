@@ -1,6 +1,6 @@
 ﻿<?php
 $mysqlhost="localhost"; 
-$mysqluser="root"; 
+$mysqluser="teslalogger";
 $mysqlpwd="teslalogger"; 
 $mysqldb="teslalogger"; 
 
